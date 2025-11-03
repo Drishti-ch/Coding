@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Application Form</title>
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+      margin: 24px;
+      color: #111;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin: 0 0 12px 0;
+      font-weight: 700;
+    }
+
+    p.lead {
+      margin: 8px 0 24px 0;
+      font-size: 16px;
+    }
+
+    form {
+      max-width: 900px;
+    }
+
+    /* Table layout */
+    table.form-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table.form-table td.label {
+      width: 32%;
+      vertical-align: top;
+      padding: 10px 8px;
+      font-size: 16px;
+    }
+
+    table.form-table td.input {
+      width: 68%;
+      padding: 8px 8px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea,
+    input[type="file"] {
+      font-size: 14px;
+      padding: 6px 8px;
+      border: 1px solid #999;
+      border-radius: 3px;
+      width: 280px;
+      box-sizing: border-box;
+    }
+
+    select.age {
+      width: 120px;
+    }
+
+    .small {
+      font-size: 14px;
+    }
+
+    /* checkbox list formatting */
+    .checkbox-list {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 6px;
+    }
+
+    .checkbox-list label {
+      display: block;
+      margin: 4px 0;
+      cursor: pointer;
+    }
+
+    .radio-group {
+      display: inline-block;
+      margin-left: 6px;
+    }
+
+    .submit-row {
+      padding-top: 14px;
+    }
+
+    .note-asterisk {
+      color: #000;
+      font-weight: 600;
+      margin-right: 6px;
+    }
+
+    textarea {
+      width: 320px;
+      height: 80px;
+      resize: vertical;
+    }
+
+    .file-inline {
+      vertical-align: middle;
+    }
+
+    /* keep table narrow on left for nicer spacing like the picture */
+    @media (max-width: 720px) {
+      table.form-table td.label, table.form-table td.input {
+        display: block;
+        width: 100%;
+      }
+      input[type="text"], select, textarea {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>APPLICATION FORM</h1>
+  <p class="lead">Thank you for your interest in working with us. Please check below for available job opportunities that meet your criteria and send your application by filling out the Job Application Form.</p>
+
+  <form action="#" method="post" enctype="multipart/form-data" aria-label="Job application form">
+    <table class="form-table" role="presentation">
+      <tr>
+        <td class="label"><span class="note-asterisk">*</span>Full Name:</td>
+        <td class="input">
+          <input type="text" name="fullname" id="fullname" placeholder="Enter your full name" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="label"><span class="note-asterisk">*</span>Email:</td>
+        <td class="input">
+          <input type="email" name="email" id="email" placeholder="Enter your Email" required>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="label"><span class="note-asterisk">*</span>Age:</td>
+        <td class="input">
+          <select name="age" id="age" class="age" required>
+            <option value="">Age</option>
+            <!-- sample ages -->
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="label">Which option best describes your current role?</td>
+        <td class="input">
+          <select name="current_role" id="current_role">
+            <option>Student</option>
+            <option>Employed</option>
+            <option>Unemployed</option>
+            <option>Freelancer</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="label"><span class="note-asterisk">*</span>Would you like to list references?</td>
+        <td class="input">
+          <div class="radio-group" role="radiogroup" aria-labelledby="referencesLabel">
+            <label><input type="radio" name="references" value="yes" required> Yes</label>
+            <label><input type="radio" name="references" value="no"> No</label>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="label">Which position would you like to apply for?</td>
+        <td class="input">
+          <select name="position" id="position">
+            <option value="">Select an option</option>
+            <option>Frontend Developer</option>
+            <option>Backend Developer</option>
+            <option>Full Stack Developer</option>
+            <option>Data Analyst</option>
+            <option>Intern</option>
+          </select>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="label">Which programming languages do you know?</td>
+        <td class="input">
+          <div class="checkbox-list" role="group" aria-label="Programming languages">
+            <label><input type="checkbox" name="lang[]" value="java"> Java</label>
+            <label><input type="checkbox" name="lang[]" value="python"> Python</label>
+            <label><input type="checkbox" name="lang[]" value="javascript"> JavaScript</label>
+            <label><input type="checkbox" name="lang[]" value="cpp"> C++</label>
+            <label><input type="checkbox" name="lang[]" value="swift"> Swift</label>
+            <label><input type="checkbox" name="lang[]" value="ruby"> Ruby</label>
+            <label><input type="checkbox" name="lang[]" value="dotnet"> .NET</label>
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="label">Upload Resume (optional):</td>
+        <td class="input">
+          <input type="file" name="resume" id="resume" class="file-inline" accept=".pdf,.doc,.docx">
+          <span class="small"> No file chosen</span>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="label">Any Comments?</td>
+        <td class="input">
+          <textarea name="comments" id="comments" placeholder="Enter your comment here..."></textarea>
+        </td>
+      </tr>
+
+      <tr class="submit-row">
+        <td class="label"></td>
+        <td class="input">
+          <button type="submit">Submit Application</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>
