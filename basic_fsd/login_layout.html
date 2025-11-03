@@ -1,0 +1,95 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      display: grid;
+      grid-template-columns: 150px auto;
+      background-color: #f5b87c;
+      border: 1px solid #000;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid #000;
+      font-weight: bold;
+    }
+    .site-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    .navbar {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      background-color: #fce4d6;
+      border: 1px solid #000;
+      border-top: none;
+    }
+    .navbar div {
+      text-align: center;
+      padding: 10px;
+      border-right: 1px solid #000;
+    }
+    .navbar div:last-child {
+      border-right: none;
+    }
+    .content {
+      display: grid;
+      grid-template-columns: 150px auto;
+      border: 1px solid #000;
+      border-top: none;
+      min-height: 200px;
+    }
+    .sidebar {
+      border-right: 1px solid #000;
+      padding: 10px;
+    }
+    .sidebar div {
+      margin: 8px 0;
+    }
+    .main-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">Logo</div>
+    <div class="site-name">Web Site Name</div>
+  </div>
+  
+  <div class="navbar">
+    <div>Home</div>
+    <div>Login</div>
+    <div>Registration</div>
+    <div>Catalogue</div>
+    <div>Cart</div>
+  </div>
+  <div class="content">
+    <div class="sidebar">
+      <div>CSE</div>
+      <div>ECE</div>
+      <div>EEE</div>
+      <div>CIVIL</div>
+    </div>
+    <div class="main-content">
+      Description of the WebSite
+    </div>
+  </div>
+</body>
+</html>
