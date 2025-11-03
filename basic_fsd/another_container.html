@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joined Boxes Inside Container</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #eaeaea;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 600px;
+      margin: 50px auto;
+      background-color: #4CAF50; 
+      border-radius: 12px;
+      overflow: hidden; 
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+    .box {
+      flex: 1 1 50%; 
+      height: 150px;
+      background-color: #a2af4c; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #b01717;
+      font-size: 22px;
+      font-weight: bold;
+      border: 1px solid rgba(255,255,255,0.2); 
+      box-sizing: border-box;
+      transition: background 0.3s ease;
+    }
+    .box:hover {
+      background-color: lab(60.44% -61.07 56.34);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+    <div class="box">Box 5</div>
+    <div class="box">Box 6</div>
+  </div>
+</body>
+</html>
